@@ -205,7 +205,6 @@ namespace GwammCalc
                 parent.Checked = true;
         }
 
-
         private void ParentCheckBoxUpdated(CheckBox parent, List<CheckBox> children)
         {
             if (parent.Checked && children.TrueForAll(box => box.Checked))
