@@ -165,7 +165,7 @@
             this.nfGuardianChk.TabIndex = 8;
             this.nfGuardianChk.Text = "Nightfall";
             this.nfGuardianChk.UseVisualStyleBackColor = true;
-            this.nfGuardianChk.CheckedChanged += new System.EventHandler(this.NfHMGuardianChk_CheckedChanged);
+            this.nfGuardianChk.CheckedChanged += new System.EventHandler(this.NfGuardianChk_CheckedChanged);
             // 
             // canthaGuardianChk
             // 
@@ -176,7 +176,7 @@
             this.canthaGuardianChk.TabIndex = 7;
             this.canthaGuardianChk.Text = "Cantha";
             this.canthaGuardianChk.UseVisualStyleBackColor = true;
-            this.canthaGuardianChk.CheckedChanged += new System.EventHandler(this.CanthaHMGuardianChk_CheckedChanged);
+            this.canthaGuardianChk.CheckedChanged += new System.EventHandler(this.CanthaGuardianChk_CheckedChanged);
             // 
             // guardianLbl
             // 
@@ -197,7 +197,7 @@
             this.prophGuardianChk.TabIndex = 5;
             this.prophGuardianChk.Text = "Prophecies";
             this.prophGuardianChk.UseVisualStyleBackColor = true;
-            this.prophGuardianChk.CheckedChanged += new System.EventHandler(this.ProphHMGuardianChk_CheckedChanged);
+            this.prophGuardianChk.CheckedChanged += new System.EventHandler(this.ProphGuardianChk_CheckedChanged);
             // 
             // titleCountLbl
             // 
@@ -282,7 +282,7 @@
             this.prophProtectorChk.Size = new System.Drawing.Size(15, 14);
             this.prophProtectorChk.TabIndex = 17;
             this.prophProtectorChk.UseVisualStyleBackColor = true;
-            this.prophProtectorChk.CheckedChanged += new System.EventHandler(this.ProphNMGuardianChk_CheckedChanged);
+            this.prophProtectorChk.CheckedChanged += new System.EventHandler(this.ProphProtectorChk_CheckedChanged);
             // 
             // canthaProtectorChk
             // 
@@ -292,7 +292,7 @@
             this.canthaProtectorChk.Size = new System.Drawing.Size(15, 14);
             this.canthaProtectorChk.TabIndex = 18;
             this.canthaProtectorChk.UseVisualStyleBackColor = true;
-            this.canthaProtectorChk.CheckedChanged += new System.EventHandler(this.CanthaNMGuardianChk_CheckedChanged);
+            this.canthaProtectorChk.CheckedChanged += new System.EventHandler(this.CanthaProtectorChk_CheckedChanged);
             // 
             // nfProtectorChk
             // 
@@ -302,7 +302,7 @@
             this.nfProtectorChk.Size = new System.Drawing.Size(15, 14);
             this.nfProtectorChk.TabIndex = 19;
             this.nfProtectorChk.UseVisualStyleBackColor = true;
-            this.nfProtectorChk.CheckedChanged += new System.EventHandler(this.NfNMGuardianChk_CheckedChanged);
+            this.nfProtectorChk.CheckedChanged += new System.EventHandler(this.NfProtectorChk_CheckedChanged);
             // 
             // nmHmLbl
             // 
@@ -712,7 +712,7 @@
             this.characterCmb.Name = "characterCmb";
             this.characterCmb.Size = new System.Drawing.Size(151, 21);
             this.characterCmb.TabIndex = 60;
-            this.characterCmb.SelectedIndexChanged += new System.EventHandler(this.characterCmb_SelectedIndexChanged);
+            this.characterCmb.SelectedIndexChanged += new System.EventHandler(this.CharacterCmb_SelectedIndexChanged);
             // 
             // saveBtn
             // 
@@ -722,7 +722,7 @@
             this.saveBtn.TabIndex = 61;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = true;
-            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            this.saveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // btnReset
             // 
@@ -732,6 +732,7 @@
             this.btnReset.TabIndex = 62;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // mainForm
             // 
