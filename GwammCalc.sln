@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.421
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GwammCalc", "src\GwammCalc\GwammCalc.csproj", "{C178488A-4606-4B21-B807-0BFDDC3F0AC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GwammCalc", "src\GwammCalc\GwammCalc.csproj", "{B9EA6DE5-B404-4396-BC3C-1F2FCB098759}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C178488A-4606-4B21-B807-0BFDDC3F0AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C178488A-4606-4B21-B807-0BFDDC3F0AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C178488A-4606-4B21-B807-0BFDDC3F0AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C178488A-4606-4B21-B807-0BFDDC3F0AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9EA6DE5-B404-4396-BC3C-1F2FCB098759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9EA6DE5-B404-4396-BC3C-1F2FCB098759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9EA6DE5-B404-4396-BC3C-1F2FCB098759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9EA6DE5-B404-4396-BC3C-1F2FCB098759}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0249ABA2-76B2-4E80-ACFE-8D27D446D904}
+		SolutionGuid = {0351FA0C-DDA5-4893-A920-57420FBC8014}
 	EndGlobalSection
 EndGlobal
