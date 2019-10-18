@@ -88,7 +88,8 @@
             this.gwammLbl = new System.Windows.Forms.Label();
             this.characterCmb = new System.Windows.Forms.ComboBox();
             this.saveBtn = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
+            this.resetBtn = new System.Windows.Forms.Button();
+            this.deleteBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // prophCartoChk
@@ -710,13 +711,13 @@
             this.characterCmb.FormattingEnabled = true;
             this.characterCmb.Location = new System.Drawing.Point(554, 80);
             this.characterCmb.Name = "characterCmb";
-            this.characterCmb.Size = new System.Drawing.Size(151, 21);
+            this.characterCmb.Size = new System.Drawing.Size(156, 21);
             this.characterCmb.TabIndex = 60;
             this.characterCmb.SelectedIndexChanged += new System.EventHandler(this.CharacterCmb_SelectedIndexChanged);
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(711, 78);
+            this.saveBtn.Location = new System.Drawing.Point(716, 78);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(75, 23);
             this.saveBtn.TabIndex = 61;
@@ -724,22 +725,33 @@
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
-            // btnReset
+            // resetBtn
             // 
-            this.btnReset.Location = new System.Drawing.Point(554, 107);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 23);
-            this.btnReset.TabIndex = 62;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.BtnReset_Click);
+            this.resetBtn.Location = new System.Drawing.Point(554, 107);
+            this.resetBtn.Name = "resetBtn";
+            this.resetBtn.Size = new System.Drawing.Size(75, 23);
+            this.resetBtn.TabIndex = 62;
+            this.resetBtn.Text = "Reset";
+            this.resetBtn.UseVisualStyleBackColor = true;
+            this.resetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.Location = new System.Drawing.Point(716, 107);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(75, 23);
+            this.deleteBtn.TabIndex = 63;
+            this.deleteBtn.Text = "Delete";
+            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 457);
-            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.deleteBtn);
+            this.Controls.Add(this.resetBtn);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.characterCmb);
             this.Controls.Add(this.gwammLbl);
@@ -868,6 +880,7 @@
         private System.Windows.Forms.Label gwammLbl;
         private System.Windows.Forms.ComboBox characterCmb;
         private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button resetBtn;
+        private System.Windows.Forms.Button deleteBtn;
     }
 }
