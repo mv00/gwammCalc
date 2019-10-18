@@ -29,6 +29,11 @@ namespace GwammCalc
 
         private void UpdateCheckboxes()
         {
+            legendaryCartoChk.Checked = character.LegendaryCarto;
+            legendaryGuardianChk.Checked = character.LegendaryGuardian;
+            legendarySkillHunterChk.Checked = character.LegendarySkillHunter;
+            legendaryVanqChk.Checked = character.LegendaryVanq;
+
             prophCartoChk.Checked = character.ProphCarto;
             canthaCartoChk.Checked = character.CanthaCarto;
             nfCartoChk.Checked = character.NfCarto;
