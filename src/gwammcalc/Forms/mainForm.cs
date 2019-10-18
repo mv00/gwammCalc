@@ -29,6 +29,11 @@ namespace GwammCalc
 
         private void UpdateCheckboxes()
         {
+            legendaryCartoChk.Checked = character.LegendaryCarto;
+            legendaryGuardianChk.Checked = character.LegendaryGuardian;
+            legendarySkillHunterChk.Checked = character.LegendarySkillHunter;
+            legendaryVanqChk.Checked = character.LegendaryVanq;
+
             prophCartoChk.Checked = character.ProphCarto;
             canthaCartoChk.Checked = character.CanthaCarto;
             nfCartoChk.Checked = character.NfCarto;
@@ -119,6 +124,18 @@ namespace GwammCalc
                 nfSkillHunterChk
             };
         }
+
+        private void Reset()
+        {
+            character = new Character();
+            characterCmb.Items.Clear();
+            characterCmb.Text = "<character name>";
+
+            UpdateCheckboxes();
+            LoadCharacterData();
+        }
+
+
 
         #region carto
         private void ProphCartoChk_CheckedChanged(object sender, EventArgs e)
@@ -470,14 +487,15 @@ namespace GwammCalc
             }
         }
 
-        private void BtnReset_Click(object sender, EventArgs e)
+        private void ResetBtn_Click(object sender, EventArgs e)
         {
-            character = new Character();
-            characterCmb.Items.Clear();
-            characterCmb.Text = "<character name>";
+            Reset();
+        }
 
-            UpdateCheckboxes();
-            LoadCharacterData();
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            _characterRepository.Remove(character);
+            Reset();
         }
     }
 }
