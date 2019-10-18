@@ -29,11 +29,6 @@ namespace GwammCalc
 
         private void UpdateCheckboxes()
         {
-            legendaryCartoChk.Checked = character.LegendaryCarto;
-            legendaryGuardianChk.Checked = character.LegendaryGuardian;
-            legendarySkillHunterChk.Checked = character.LegendarySkillHunter;
-            legendaryVanqChk.Checked = character.LegendaryVanq;
-
             prophCartoChk.Checked = character.ProphCarto;
             canthaCartoChk.Checked = character.CanthaCarto;
             nfCartoChk.Checked = character.NfCarto;
@@ -134,8 +129,6 @@ namespace GwammCalc
             UpdateCheckboxes();
             LoadCharacterData();
         }
-
-
 
         #region carto
         private void ProphCartoChk_CheckedChanged(object sender, EventArgs e)
@@ -439,6 +432,8 @@ namespace GwammCalc
 
             if (children.TrueForAll(box => box.Checked))
                 parent.Checked = true;
+            else
+                parent.Checked = false;
         }
 
         private void ParentCheckBoxUpdated(CheckBox parent, List<CheckBox> children)
@@ -453,7 +448,7 @@ namespace GwammCalc
             }
             else
             {
-                children.ForEach(box => { box.Checked = false; box.Enabled = true; });
+                children.ForEach(box => { box.Enabled = true; });
             }
 
             UpdateTitleCount(parent);
