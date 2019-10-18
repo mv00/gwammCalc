@@ -125,6 +125,18 @@ namespace GwammCalc
             };
         }
 
+        private void Reset()
+        {
+            character = new Character();
+            characterCmb.Items.Clear();
+            characterCmb.Text = "<character name>";
+
+            UpdateCheckboxes();
+            LoadCharacterData();
+        }
+
+
+
         #region carto
         private void ProphCartoChk_CheckedChanged(object sender, EventArgs e)
         {
@@ -475,14 +487,15 @@ namespace GwammCalc
             }
         }
 
-        private void BtnReset_Click(object sender, EventArgs e)
+        private void ResetBtn_Click(object sender, EventArgs e)
         {
-            character = new Character();
-            characterCmb.Items.Clear();
-            characterCmb.Text = "<character name>";
+            Reset();
+        }
 
-            UpdateCheckboxes();
-            LoadCharacterData();
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            _characterRepository.Remove(character);
+            Reset();
         }
     }
 }

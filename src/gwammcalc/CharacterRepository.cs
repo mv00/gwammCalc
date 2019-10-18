@@ -9,9 +9,10 @@ namespace GwammCalc
     {
         Character GetCharacter(string characterName);
         IEnumerable<string> GetCharacterNames();
-        void Add(Character acc);
+        void Add(Character character);
+        void Remove(Character character);
         void Load();
-        void Save();
+        void Save();        
     }
 
     public class CharacterRepository : ICharacterRepository
@@ -28,16 +29,14 @@ namespace GwammCalc
             }
         }
 
-        public void Load()
+        public Character GetCharacter(string characterName)
         {
-            if (!File.Exists(_filePath))
-            {
-                characters = new List<Character>();
-                return;
-            }
+            return characters.First(c => c.CharacterName.Equals(characterName));
+        }
 
-            string text = File.ReadAllText(_filePath);
-            characters = JsonConvert.DeserializeObject<List<Character>>(text);
+        public IEnumerable<string> GetCharacterNames()
+        {
+            return characters.Select(c => c.CharacterName);
         }
 
         public void Add(Character acc)
@@ -50,14 +49,26 @@ namespace GwammCalc
             }
         }
 
-        public Character GetCharacter(string characterName)
+        public void Remove(Character character)
         {
-            return characters.First(c => c.CharacterName.Equals(characterName));
+            characters.Remove(character);
+
+            if (_filePath != null)
+            {
+                Save();
+            }
         }
 
-        public IEnumerable<string> GetCharacterNames()
+        public void Load()
         {
-            return characters.Select(c => c.CharacterName);
+            if (!File.Exists(_filePath))
+            {
+                characters = new List<Character>();
+                return;
+            }
+
+            string text = File.ReadAllText(_filePath);
+            characters = JsonConvert.DeserializeObject<List<Character>>(text);
         }
 
         public void Save()
@@ -65,6 +76,12 @@ namespace GwammCalc
             string text = JsonConvert.SerializeObject(characters, Formatting.Indented);
             File.WriteAllText(_filePath, text);
         }
+
+
+
+
+
+
     }
 }
 
